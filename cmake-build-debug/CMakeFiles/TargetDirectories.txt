@@ -1,0 +1,3 @@
+C:/Users/ameri/OneDrive/Desktop/aed/tarea-foward-list/HW1-foward-list/cmake-build-debug/CMakeFiles/HW1_foward_list.dir
+C:/Users/ameri/OneDrive/Desktop/aed/tarea-foward-list/HW1-foward-list/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ameri/OneDrive/Desktop/aed/tarea-foward-list/HW1-foward-list/cmake-build-debug/CMakeFiles/rebuild_cache.dir
