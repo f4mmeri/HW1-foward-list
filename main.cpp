@@ -1,38 +1,40 @@
 #include <iostream>
 #include "foward_list.h"
+
 using namespace std;
 
 int main() {
-    cout << "FowardList tests:" << endl;
-    ForwardList<int> Lista;
-    Lista.push_front(7);
-    Lista.push_front(1);
-    Lista.push_front(3);
-    Lista.push_front(6);
-    Lista.push_front(4);
-    Lista.push_front(5);
+    ForwardList<int> list;
 
-    cout << "Lista después de agregar elemento: ";
-    Lista.print();
+    list.push_front(10);
+    list.push_back(20);
+    list.push_front(5);
+    list.push_back(25);
+    list.push_back(15);
 
-    Lista.front();
-    Lista.back();
-    Lista.push_back(12);
-    Lista.push_back(2);
-    Lista.push_back(8);
-    Lista.pop_back();
-    Lista.pop_front();
-    cout << "Lista después de cambios: ";
-    Lista.print();
+    cout << "Lista después de agregar elementos (push_front, push_back): ";
+    list.print();
 
-    Lista[3];
-    Lista.empty();
-    Lista.size();
-    Lista.sort();
-    Lista.print();
+    list.pop_front();
+    list.pop_back();
+    cout << "Lista después de pop_front y pop_back: ";
+    list.print();
 
-    Lista.reverse();
-    Lista.print();
-    Lista.clear();
-    Lista.print();
+    list[1];
+    list.empty();
+    list.size();
+
+    list.sort();
+    cout << "Lista después de ordenar: ";
+    list.print();
+
+    list.reverse();
+    cout << "Lista después de invertir: ";
+    list.print();
+
+    list.clear();
+    cout << "Lista después de clear: ";
+    list.print();
+
+    return 0;
 }

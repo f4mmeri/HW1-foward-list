@@ -20,7 +20,7 @@ public:
     ForwardList() : head(nullptr) {}
 
     ~ForwardList() {
-        clear(); // Limpiar los elementos al destruir la lista
+        clear();
     }
 
     T front() {
