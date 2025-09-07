@@ -40,14 +40,12 @@ public:
         return temp->data;
     }
 
-    // Agrega un elemento al comienzo
     void push_front(T value) {
         Node<T>* new_node = new Node<T>(value);
         new_node->next = head;
         head = new_node;
     }
 
-    // Agrega un elemento al final
     void push_back(T value) {
         Node<T>* new_node = new Node<T>(value);
         if (head == nullptr) {
@@ -61,7 +59,6 @@ public:
         temp->next = new_node;
     }
 
-    // Elimina el primer elemento
     T pop_front() {
         if (head == nullptr) return T();
         Node<T>* temp = head;
@@ -72,7 +69,7 @@ public:
         return data;
     }
 
-    // Elimina el último elemento
+
     T pop_back() {
         if (head == nullptr) return T();
         if (head->next == nullptr) {
@@ -93,30 +90,28 @@ public:
         return data;
     }
 
-    // Retorna el elemento en la posición indicada
+
     T operator[](int index) {
         if (head == nullptr || index < 0) return T();
         Node<T>* temp = head;
         int counter = 0;
         while (temp != nullptr) {
             if (counter == index) {
-                cout << "Element at index " << index << ": " << temp->data << endl;
                 return temp->data;
             }
             counter++;
             temp = temp->next;
         }
-        return T(); // Si el índice es fuera de rango
+        return T();
     }
 
-    // Verifica si la lista está vacía
     bool empty() {
         bool isEmpty = (head == nullptr);
-        cout << "Is Empty: " << boolalpha << isEmpty << endl;
+        cout << "vacio: " << boolalpha << isEmpty << endl;
         return isEmpty;
     }
 
-    // Retorna el tamaño de la lista
+
     int size() {
         int count = 0;
         Node<T>* temp = head;
@@ -128,14 +123,13 @@ public:
         return count;
     }
 
-    // Elimina todos los elementos de la lista
     void clear() {
         while (head != nullptr) {
             pop_front();
         }
     }
 
-    // Ordena la lista usando un algoritmo simple (burbuja)
+
     void sort() {
         if (head == nullptr) return;
         Node<T>* temp1 = head;
@@ -153,7 +147,6 @@ public:
         }
     }
 
-    // Revierte el orden de los elementos de la lista
     void reverse() {
         Node<T>* prev = nullptr;
         Node<T>* curr = head;
@@ -167,7 +160,7 @@ public:
         head = prev;
     }
 
-    // Imprime los elementos de la lista
+    // Imprime los elementos de la lista para main
     void print() {
         if (head == nullptr) {
             cout << "List is empty" << endl;

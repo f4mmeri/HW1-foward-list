@@ -4,32 +4,35 @@ using namespace std;
 
 int main() {
     cout << "FowardList tests:" << endl;
-    ForwardList<int> Listagod;
-    Listagod.push_front(7);
-    Listagod.push_front(1);
-    Listagod.push_front(3);
-    Listagod.push_front(6);
-    Listagod.push_front(4);
-    Listagod.push_front(5);
-    Listagod.print();
+    ForwardList<int> Lista;
+    Lista.push_front(7);
+    Lista.push_front(1);
+    Lista.push_front(3);
+    Lista.push_front(6);
+    Lista.push_front(4);
+    Lista.push_front(5);
 
-    Listagod.front();
-    Listagod.back();
-    Listagod.push_back(12);
-    Listagod.push_back(2);
-    Listagod.push_back(8);
-    Listagod.pop_back();
-    Listagod.pop_front();
-    Listagod.print();
+    cout << "Lista después de agregar elemento: ";
+    Lista.print();
 
-    Listagod[3];
-    Listagod.empty();
-    Listagod.size();
-    Listagod.sort();
-    Listagod.print();
+    Lista.front();
+    Lista.back();
+    Lista.push_back(12);
+    Lista.push_back(2);
+    Lista.push_back(8);
+    Lista.pop_back();
+    Lista.pop_front();
+    cout << "Lista después de cambios: ";
+    Lista.print();
 
-    Listagod.reverse();
-    Listagod.print();
-    Listagod.clear();
-    Listagod.print();
+    Lista[3];
+    Lista.empty();
+    Lista.size();
+    Lista.sort();
+    Lista.print();
+
+    Lista.reverse();
+    Lista.print();
+    Lista.clear();
+    Lista.print();
 }
